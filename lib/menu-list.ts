@@ -2,10 +2,12 @@ import {
   Tag,
   Users,
   Settings,
-  Bookmark,
-  SquarePen,
   LayoutGrid,
-  LucideIcon
+  LucideIcon,
+  LayoutTemplate,
+  CarFront,
+  Car,
+  CirclePlus
 } from "lucide-react";
 
 type Submenu = {
@@ -46,7 +48,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "",
           label: "Cars",
-          icon: SquarePen,
+          icon: CarFront,
           submenus: [
             {
               href: "/cars",
@@ -59,9 +61,9 @@ export function getMenuList(pathname: string): Group[] {
           ]
         },
         {
-          href: "/categories",
-          label: "Categories",
-          icon: Bookmark
+          href: "/templates",
+          label: "Templates",
+          icon: LayoutTemplate
         },
         {
           href: "/tags",
