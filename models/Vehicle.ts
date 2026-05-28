@@ -10,19 +10,25 @@ const schema = new Schema({
     title : {type : String, required : true},
     mileage : {type: Number, required : true},
     purchasePrice : {type : Number, required : true},
-    targetSalePrice : {type : Number, required : true},
+    targetRetail : {type : Number, required : true},
     dueDate : {type : Date, required: true},
-    Instructions : String,
+    instructions : String,
     isSold: {type : Boolean, Default : false},
     soldPrice : {type : Number},
+    soldAt : {type : Date},
     status : String,
     // "in-prep" | "ready" | "sold" | "on-hold" 
-
-
+    expenses: [
+      {
+        title: { type: String, required: true },
+        amount: { type: Number, required: true },
+        date: { type: Date, default: Date.now }
+      }
+    ]
 }, {timestamps : true});
 
 
-const Vehicle = mongoose.model('Vehicle', schema);
+const Vehicle = mongoose.models.Vehicle || mongoose.model('Vehicle', schema);
 
 export default Vehicle;
 

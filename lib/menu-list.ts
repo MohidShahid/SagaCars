@@ -7,7 +7,8 @@ import {
   LayoutTemplate,
   CarFront,
   Car,
-  CirclePlus
+  CirclePlus,
+  Receipt
 } from "lucide-react";
 
 type Submenu = {
@@ -35,7 +36,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/overview",
+          href: "/",
           label: "Overview",
           icon: LayoutGrid,
           submenus: []
@@ -61,31 +62,42 @@ export function getMenuList(pathname: string): Group[] {
           ]
         },
         {
-          href: "/templates",
+          href: "",
           label: "Templates",
-          icon: LayoutTemplate
+          icon: LayoutTemplate,
+          submenus: [
+            {
+              href: "/templates",
+              label: "All Templates"
+            },
+            {
+              href: "/templates/add",
+              label: "Add New Template"
+            },
+          ]
         },
         {
-          href: "/tags",
-          label: "Tags",
-          icon: Tag
+          href: "/expenses",
+          label: "Expenses",
+          icon: Receipt,
+          submenus: []
         }
       ]
     },
-    {
-      groupLabel: "Settings",
-      menus: [
-        {
-          href: "/users",
-          label: "Users",
-          icon: Users
-        },
-        {
-          href: "/account",
-          label: "Account",
-          icon: Settings
-        }
-      ]
-    }
+    // {
+    //   groupLabel: "Settings",
+    //   menus: [
+    //     {
+    //       href: "/users",
+    //       label: "Users",
+    //       icon: Users
+    //     },
+    //     {
+    //       href: "/account",
+    //       label: "Account",
+    //       icon: Settings
+    //     }
+    //   ]
+    // }
   ];
 }

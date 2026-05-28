@@ -32,6 +32,6 @@ const schema = new mongoose.Schema({
   items: [checklistItemSchema],
 }, { timestamps: true })
 
-const VehicleChecklist = mongoose.model("VehicleChecklist", schema);
+const VehicleChecklist = mongoose.models.VehicleChecklist || mongoose.model("VehicleChecklist", schema);
 
 export default VehicleChecklist;

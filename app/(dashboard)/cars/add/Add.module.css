@@ -1,0 +1,74 @@
+.inputField {
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #d4d4d8;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #18181b;
+  box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.1);
+}
+
+.inputField::placeholder {
+  color: #a1a1aa;
+}
+
+.fieldLabel {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #18181b;
+  display: inline-block;
+}
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 60px;
+}
+
+.cancelButton {
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d8;
+  background-color: white;
+  color: #18181b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background-color: #f4f4f5;
+}
+
+.submitButton {
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 10px;
+  background-color: #18181b;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #27272a;
+}
